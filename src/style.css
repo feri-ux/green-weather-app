@@ -1,27 +1,28 @@
 body {
   font-family: Google Sans, Roboto, arial, sans-serif;
   font-size: 16px;
-  background-color: #4f772d;
-  color: white;
-  margin-top: 30px;
+  color: black;
+  background-color: #e9edc9;
+  margin-top: 60px;
 }
 
 h1 {
-  color: rgb(255, 255, 255);
   text-align: center;
   font-size: 36px;
   font-weight: 200;
   margin-top: 25px;
+  color: black;
 }
 
 ul {
-  padding: 0;
   text-align: center;
   list-style: none;
+  padding: 0;
 }
 
 hr {
-  margin: 4px;
+  background-color: #d4a373;
+  margin: 5px;
 }
 
 .weather-app-wrapper {
@@ -30,9 +31,9 @@ hr {
 }
 
 .weather-app {
-  border: 1px solid #132a13;
+  background-color: #ccd5ae;
+  border: 1px solid #ccd5ae;
   border-radius: 10px;
-  background-color: #132a13;
   margin: 0 auto;
   padding: 25px 20px 25px 35px;
 }
@@ -41,10 +42,21 @@ hr {
   margin-top: 30px;
 }
 
+.formColor {
+  background-color: hsl(67, 50%, 86%);
+  border-color: #d4a373;
+}
+
+.btn-search {
+  background-color: #d4a373;
+  border-color: #d49556;
+  font-weight: 500;
+}
+
 .date {
   text-align: center;
   font-size: 14px;
-  opacity: 90%;
+  opacity: 60%;
 }
 
 .temperature {
@@ -63,26 +75,27 @@ hr {
 
 .condition {
   text-align: center;
+  opacity: 60%;
   font-size: 22px;
 }
 
 .icon {
+  width: 65px;
   position: relative;
   left: 15px;
-  width: 65px;
 }
 
 .weather {
   text-align: center;
   font-size: 14px;
-  opacity: 90%;
+  opacity: 60%;
 }
 
 .overview {
   margin-top: 30px;
   margin-left: 30px;
-  border: 1px solid #ecf39e;
   padding: 65px 35px;
+  border: 1px dashed #d4a373;
   border-radius: 120px;
 }
 
@@ -100,35 +113,33 @@ hr {
 
 .maxMin {
   font-size: 12px;
+  opacity: 60%;
 }
 
-.formColor {
-  background-color: #ecf39e;
-}
-
-.btn-search {
-  background-color: #ecf39e;
-}
 .col-3-time {
+  font-size: 14px;
   position: relative;
-  left: 73px;
+  left: 78px;
   top: 1px;
-  border: 1px dashed #ecf39e;
+  border: 1px dashed #d4a373;
   padding-block-start: 35px;
   border-radius: 50px;
-  background-color: #31572c;
-  padding-left: 12px;
-  padding-right: 12px;
+  background-color: #faedcd;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: black;
+  opacity: 70%;
 }
 
 .col-3-circle {
   position: relative;
   left: 45px;
   top: 32px;
-  border: 1px dashed #ecf39e;
-  padding: 20px;
+  border: 1px dashed #d4a373;
   border-radius: 100px;
-  background-color: #31572c;
+  padding: 20px;
+  background-color: #faedcd;
+  opacity: 70%;
 }
 
 .col-2-icon {
