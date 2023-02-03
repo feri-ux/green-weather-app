@@ -8,21 +8,19 @@ console.log(url);
 
 function showTemperature(response) {
   console.log(response);
-
   let cityElement = document.querySelector("h1");
-  cityElement.innerHTML = response.data.name;
-
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
-
   let descriptionElement = document.querySelector("#description");
-  descriptionElement.innerHTML = response.data.weather[0].description;
-
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-
   let windElement = document.querySelector("#wind");
+  //let iconElement=document.querySelector("#icon")
+
+  cityElement.innerHTML = response.data.name;
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
+  //iconElement.querySelector=response.
 }
 
 function search(city) {
