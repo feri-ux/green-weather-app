@@ -14,6 +14,15 @@ function showTemperature(response) {
 
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
+
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
 }
 
 function search(city) {
