@@ -10,6 +10,14 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Courgette&family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&family=PT+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>weatherApp</title>
     <link rel="stylesheet" href="src/style.css" />
@@ -20,13 +28,14 @@
         <div class="weather-app">
           <div class="row">
             <div class="col-6">
-              <form class="form-group">
+              <form class="form-group" id="search-form">
                 <div class="row">
                   <div class="col-10">
                     <input
                       type="search"
                       class="form-control formColor"
                       placeholder="Type a city ..."
+                      id="city-input"
                     />
                   </div>
                   <div class="col-2">
@@ -43,7 +52,10 @@
               <br />
               <div class="row">
                 <div class="col-8">
-                  <div class="temperature">24 <span class="unit">°C</span></div>
+                  <div class="temperature">
+                    <span id="temperature">24</span>
+                    <span class="unit">°C</span>
+                  </div>
                 </div>
                 <div class="col-3-time">10:00 Am</div>
               </div>
