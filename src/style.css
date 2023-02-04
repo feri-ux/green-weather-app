@@ -74,16 +74,20 @@ hr {
   left: -16px;
 }
 
-.condition {
+.weather-condition {
   text-align: center;
-  opacity: 60%;
-  font-size: 22px;
 }
 
-.icon {
-  width: 65px;
+.weather-condition .description {
+  font-size: 20px;
+  opacity: 60%;
+}
+
+.weather-condition img {
+  text-align: center;
+  width: 64px;
   position: relative;
-  left: 15px;
+  bottom: 9px;
 }
 
 .weather {
@@ -121,14 +125,11 @@ hr {
 .col-3-time {
   font-size: 14px;
   position: relative;
-  left: 78px;
-  top: 1px;
+  left: 100px;
   border: 1px dashed #d4a373;
-  padding-block-start: 35px;
   border-radius: 50px;
   background-color: #faedcd;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 35px 15px;
   color: black;
   opacity: 70%;
 }
@@ -138,7 +139,7 @@ hr {
   left: 45px;
   top: 32px;
   border: 1px dashed #d4a373;
-  border-radius: 100px;
+  border-radius: 50px;
   padding: 20px;
   background-color: #faedcd;
   opacity: 70%;

@@ -1,11 +1,3 @@
-let apiKey = "dc738e44d776f0c7801fb0a941f76648";
-let lat = 44;
-let lon = 10.99;
-let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-console.log(url);
-
-//axios.get(url).then(showTemprature);
-
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -50,15 +42,24 @@ function formatDate(timestamp) {
   return `${day}, ${months[currentMonths]} ${currentDate}`;
 }
 
+function displayForecast(response) {
+  console.log(response.data.daily);
+}
+
+function getForcast(coordinate) {
+  let apiKey = "dc738e44d776f0c7801fb0a941f76648";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinate.lat}&lon=${coordinate.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showTemperature(response) {
-  console.log(response);
   let cityElement = document.querySelector("h1");
   let temperatureElement = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
-  //let iconElement=document.querySelector("#icon")
+  let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.name;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -66,7 +67,13 @@ function showTemperature(response) {
   humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  //iconElement.querySelector=response.
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForcast(response.data.coord);
 }
 
 function search(city) {
