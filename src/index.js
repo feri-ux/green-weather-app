@@ -47,9 +47,10 @@ function displayForecast(response) {
 }
 
 function getForcast(coordinate) {
-  let apiKey = "dc738e44d776f0c7801fb0a941f76648";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinate.lat}&lon=${coordinate.lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
+  let apiKey = "a867e25f2d83db579421a57fd8e937ec";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=${coordinate.lat}&lon=${coordinate.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  //axios.get(apiUrl).then(displayForecast);
 }
 
 function displayForecast() {
@@ -125,4 +126,3 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 
 search("Tehran");
-displayForecast();
