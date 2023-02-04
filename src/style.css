@@ -123,13 +123,14 @@ hr {
 }
 
 .col-3-time {
+  padding: 35px 17px;
   font-size: 14px;
   position: relative;
   left: 100px;
+  top: 1px;
   border: 1px dashed #d4a373;
   border-radius: 50px;
   background-color: #faedcd;
-  padding: 35px 15px;
   color: black;
   opacity: 70%;
 }
