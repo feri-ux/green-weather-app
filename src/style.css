@@ -23,7 +23,7 @@ ul {
 
 hr {
   background-color: #d4a373;
-  margin: 5px;
+  margin-block: 2px;
 }
 
 .weather-app-wrapper {
@@ -99,22 +99,24 @@ hr {
 .overview {
   margin-top: 30px;
   margin-left: 30px;
-  padding: 65px 35px;
+  padding: 75px 38px;
   border: 1px dashed #d4a373;
   border-radius: 120px;
   background-color: #ccd5ae;
 }
 
 .day {
-  font-size: 16px;
+  font-size: 14px;
+  opacity: 0.6;
 }
 
 .degree {
-  font-size: 16px;
+  font-size: 14px;
+  opacity: 0.6;
 }
 
 .icon-forecast {
-  width: 37px;
+  width: 28px;
 }
 
 .maxMin {
@@ -126,7 +128,7 @@ hr {
   padding: 35px 17px;
   font-size: 14px;
   position: relative;
-  left: 100px;
+  left: 90px;
   top: 1px;
   border: 1px dashed #d4a373;
   border-radius: 50px;

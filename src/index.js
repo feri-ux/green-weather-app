@@ -52,6 +52,39 @@ function getForcast(coordinate) {
   axios.get(apiUrl).then(displayForecast);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = "";
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="row">
+    <div class="col-5">
+    <span class="day">${day}</span>
+    <div class="maxMin">
+    <strong>25°</strong> <span>17°</span>
+    </div>
+    </div>
+    <div class="col-3">
+    <span class="degree">24</span>
+    </div>
+    <div class="col-4">
+      <img
+      src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+      alt=""
+      class="icon-forecast"
+      />
+      </div>
+      </div>
+      <hr>
+      `;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemperature(response) {
   let cityElement = document.querySelector("h1");
   let temperatureElement = document.querySelector("#temperature");
@@ -90,3 +123,6 @@ function searchCity(event) {
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
+
+search("Tehran");
+displayForecast();
